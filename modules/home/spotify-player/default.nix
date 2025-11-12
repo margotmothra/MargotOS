@@ -1,12 +1,4 @@
-{ lib, ... }:
-
-let
-  # Get client ID from environment variable or use placeholder
-  clientId = builtins.getEnv "SPOTIFY_CLIENT_ID";
-  # If no env var set, use a placeholder that will fail spotify auth
-  finalClientId = if clientId != "" then clientId else "REPLACE_WITH_YOUR_SPOTIFY_CLIENT_ID";
-in
-{
+{lib, ...}: {
   # Spotify Player Configuration
   # Uses the built-in home-manager programs.spotify-player module
   programs.spotify-player = {
@@ -15,12 +7,12 @@ in
     settings = {
       theme = lib.mkForce "MargotTheme";
       client_port = 8080;
-      client_id = finalClientId;
+      client_id = "f644ef6e707f48d9bf8096b18050eca6";
       login_redirect_uri = "http://127.0.0.1:8989/login";
       playback_format = ''
-{status} {track} • {artists} {liked}
-{album} • {genres}
-{metadata}'';
+        {status} {track} • {artists} {liked}
+        {album} • {genres}
+        {metadata}'';
       playback_metadata_fields = [
         "repeat"
         "shuffle"
@@ -149,27 +141,62 @@ in
           bright_white = "#000000";
         };
         component_style = {
-          block_title = { fg = "Magenta"; };
-          border = { fg = "Black"; };
-          like = { fg = "Red"; modifiers = [ "Bold" ]; };
-          selection = { bg = "Green"; fg = "Black"; modifiers = [ "Bold" ]; };
-          secondary_row = { fg = "BrightBlack"; };
-          playback_progress_bar = { bg = "BrightBlack"; fg = "Green"; };
-          playback_track = { fg = "Green"; modifiers = [ "Bold" ]; };
-          playback_status = { fg = "Green"; modifiers = [ "Bold" ]; };
-          playback_artists = { fg = "Green"; modifiers = [ "Bold" ]; };
-          playback_album = { fg = "Blue"; };
-          playback_genres = { fg = "BrightBlack"; modifiers = [ "Italic" ]; };
-          playback_metadata = { fg = "BrightBlack"; };
-          current_playing = { fg = "Green"; modifiers = [ "Bold" ]; };
-          page_desc = { fg = "Green"; modifiers = [ "Bold" ]; };
-          playlist_desc = { fg = "BrightBlack"; modifiers = [ "Dim" ]; };
-          table_header = { fg = "Green"; };
-          lyrics_played = { modifiers = [ "Dim" ]; };
-          lyrics_playing = { fg = "Green"; modifiers = [ "Bold" ]; };
+          block_title = {fg = "Magenta";};
+          border = {fg = "Black";};
+          like = {
+            fg = "Red";
+            modifiers = ["Bold"];
+          };
+          selection = {
+            bg = "Green";
+            fg = "Black";
+            modifiers = ["Bold"];
+          };
+          secondary_row = {fg = "BrightBlack";};
+          playback_progress_bar = {
+            bg = "BrightBlack";
+            fg = "Green";
+          };
+          playback_track = {
+            fg = "Green";
+            modifiers = ["Bold"];
+          };
+          playback_status = {
+            fg = "Green";
+            modifiers = ["Bold"];
+          };
+          playback_artists = {
+            fg = "Green";
+            modifiers = ["Bold"];
+          };
+          playback_album = {fg = "Blue";};
+          playback_genres = {
+            fg = "BrightBlack";
+            modifiers = ["Italic"];
+          };
+          playback_metadata = {fg = "BrightBlack";};
+          current_playing = {
+            fg = "Green";
+            modifiers = ["Bold"];
+          };
+          page_desc = {
+            fg = "Green";
+            modifiers = ["Bold"];
+          };
+          playlist_desc = {
+            fg = "BrightBlack";
+            modifiers = ["Dim"];
+          };
+          table_header = {fg = "Green";};
+          lyrics_played = {modifiers = ["Dim"];};
+          lyrics_playing = {
+            fg = "Green";
+            modifiers = ["Bold"];
+          };
         };
       }
       # Add more themes from your original theme.toml if needed
     ];
   };
 }
+
