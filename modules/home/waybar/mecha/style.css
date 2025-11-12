@@ -1,0 +1,11 @@
+* {
+	all: initial; /* ignore GTK theme */
+}
+
+@import "/home/margot/margotos/modules/home/waybar/mecha/styles/modules-center.css";
+@import "/home/margot/margotos/modules/home/waybar/mecha/styles/modules-left.css";
+@import "/home/margot/margotos/modules/home/waybar/mecha/styles/modules-right.css";
+@import "/home/margot/margotos/modules/home/waybar/mecha/styles/states.css";
+@import "/home/margot/margotos/modules/home/waybar/mecha/styles/typeface.css";
+@import "/home/margot/margotos/modules/home/waybar/mecha/styles/waybar.css";
+@import "/home/margot/margotos/modules/home/waybar/mecha/theme.css";

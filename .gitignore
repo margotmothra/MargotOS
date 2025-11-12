@@ -1,0 +1,9 @@
+# Spotify Player Secrets
+modules/home/spotify-player/secrets.nix
+
+# Other potential secret files
+**/secrets.nix
+*.secret
+*.key
+.env
+.env.local
