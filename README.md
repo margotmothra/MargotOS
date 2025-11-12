@@ -2,4 +2,6 @@
 
 ## My personal NixOS configuration
 
-based off of ZaneyOS's config https://gitlab.com/Zaney/zaneyos
+![Desktop image](assets/desktop.png)
+
+[based off of ZaneyOS's config](https://gitlab.com/Zaney/zaneyos)
