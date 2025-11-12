@@ -1,15 +1,10 @@
 <h1 align="center">✨ MargotOS ✨</h1>
 
 <p align="center">
-  <em>My personal NixOS configuration — clean, minimal, and lovingly tweaked.</em>
+  <em>My personal NixOS configuration</em>
 </p>
 
 ---
-
-## 🧭 Overview
-
-MargotOS is my personal **NixOS configuration**, centered around a smooth
-Wayland experience with a focus on aesthetics and usability.
 
 <p align="center">
   <img src="assets/desktop.png" alt="Desktop preview" width="900"/>
@@ -31,9 +26,9 @@ Wayland experience with a focus on aesthetics and usability.
   <img src="https://github.com/sejjy/mechabar/raw/main/.github/assets/catppuccin-mocha.png" alt="Mechabar preview" width="600"/>
 - 🧩 Launcher: [Rofi](https://github.com/davatorium/rofi)
 - 🎵 Music: [spotify-player](https://github.com/aome510/spotify-player)
-- 🌐 Browser: Zen Browser with the
-  [Zen Internet](https://addons.mozilla.org/en-US/firefox/addon/zen-internet/)
-  extension
+- 🌐 Browser: Zen Browser with
+  - [Zen Internet](https://addons.mozilla.org/en-US/firefox/addon/zen-internet/)
+  - [Tridactyl](https://github.com/tridactyl/tridactyl) for Vim-style navigation
 
 ---
 
@@ -46,5 +41,5 @@ Wayland experience with a focus on aesthetics and usability.
 - 🖼️ Wallpaper: [Wallhaven — ml3ek1](https://wallhaven.cc/w/ml3ek1)
 
 <p align="center">
-  <img src="assets/demo.gif" alt="Zen Browser demo" width="800"/>
+  <img src="assets/demo.gif" alt="Zen Browser demo" width="1000"/>
 </p>
