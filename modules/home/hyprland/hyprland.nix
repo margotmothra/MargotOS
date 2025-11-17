@@ -157,6 +157,11 @@ in {
         mfact = 0.5;
       };
 
+      bind = [
+        "$modifier, equal, resizeactive, 30 30"
+        "$modifier, minus, resizeactive, -30 -30"
+      ];
+
       # Ensure Xwayland windows render at integer scale; compositor scales them
       xwayland = {
         force_zero_scaling = true;
