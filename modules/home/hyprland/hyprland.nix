@@ -50,7 +50,6 @@ in {
         kb_layout = "${keyboardLayout}";
         kb_options = [
           "grp:alt_caps_toggle"
-          "caps:escape"
         ];
         numlock_by_default = true;
         repeat_delay = 300;

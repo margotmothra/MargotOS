@@ -11,9 +11,9 @@
       # Global key mappings
       modmap = [
         {
-          name = "caps_to_alt";
+          name = "caps_to_escape";
           remap = {
-            "CapsLock" = "Alt_L";  # Remap Caps Lock to Left Alt
+            "CapsLock" = "Esc";  # Remap Caps Lock to Escape
           };
         }
       ];
