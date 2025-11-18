@@ -31,11 +31,11 @@
         in
         {
           "*" = {
-            bg = mkLiteral "#1e2328";
-            fg = mkLiteral "#ffffff";
-            selected = mkLiteral "#3b82f6";
+            bg = mkLiteral "rgba(255, 255, 255, 0.85)";
+            fg = mkLiteral "#2d3748";
+            selected = mkLiteral "rgba(59, 130, 246, 0.8)";
             background-color = mkLiteral "transparent";
-            foreground = mkLiteral "#ffffff";
+            foreground = mkLiteral "#2d3748";
           };
           
           window = {
@@ -66,7 +66,7 @@
             spacing = mkLiteral "0px";
             padding = mkLiteral "15px";
             border-radius = mkLiteral "15px";
-            background-color = mkLiteral "rgba(255, 255, 255, 0.05)";
+            background-color = mkLiteral "rgba(255, 255, 255, 0.3)";
             children = map mkLiteral [
               "entry"
             ];
@@ -78,7 +78,7 @@
             text-color = mkLiteral "@fg";
             cursor = mkLiteral "text";
             placeholder = "Search...";
-            placeholder-color = mkLiteral "rgba(255, 255, 255, 0.5)";
+            placeholder-color = mkLiteral "rgba(45, 55, 72, 0.5)";
           };
           
           listview = {

@@ -13,6 +13,7 @@
       # Examples:
       packages = [
         "com.discordapp.Discord"         # Discord Flatpak (alternative)
+        "app.bluebubbles.BlueBubbles"    # Blue Bubbles - iMessage for Android & Linux
         #"com.github.tchx84.Flatseal" #Manage flatpak permissions - should always have this
         #"com.rtosta.zapzap"              # WhatsApp client
         #"io.github.flattool.Warehouse"   # Manage flatpaks, clean data, remove flatpaks and deps

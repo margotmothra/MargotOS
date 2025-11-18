@@ -44,6 +44,7 @@
     initContent = ''
             export TERM=xterm-256color
             export ZDOTDIR=$HOME/.config/zsh
+            export PATH="$HOME/.local/bin:$PATH"
             # Override LS_COLORS with EZA_COLORS for better dash visibility
             export EZA_COLORS="xx=01;34:da=01;34" # xx = punctuation/dashes (bold blue), da = dates (bold blue)
             bindkey -e # Enable Emacs-style keybindings
