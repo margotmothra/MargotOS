@@ -20,25 +20,32 @@
     mtr.enable = true;
     adb.enable = true;
     hyprlock.enable = true;
+    zsh.enable = true; # Add zsh to /etc/shells
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;
     };
   };
 
-  # xremap configuration to remap CapsLock to Alt
-  services.xremap = {
+  # xremap configuration moved to modules/core/xremap.nix
+
+  # Input remapper service
+  services.input-remapper = {
     enable = true;
-    withWlroots = true;
-    config = {
-      modmap = [
-        {
-          name = "Global";
-          remap = {"CapsLock" = "Alt_L";};
-        }
-      ];
-    };
+    enableUdevRules = true;
   };
+
+  # PolicyKit rules for input-remapper
+  security.polkit.enable = true;
+  security.polkit.extraConfig = ''
+    polkit.addRule(function(action, subject) {
+        if ((action.id == "org.freedesktop.policykit.exec") &&
+            (action.lookup("command_line") && action.lookup("command_line").indexOf("input-remapper-reader-service") != -1) &&
+            subject.isInGroup("input")) {
+            return polkit.Result.YES;
+        }
+    });
+  '';
 
   # niri tiling behavior service
   systemd.user.services.niri-tile-to-n = {
@@ -159,6 +166,7 @@
     inputs.zen-browser.packages.${pkgs.system}.default
     visidata # Terminal-based data exploration tool
     xremap # Key remapper for X11 and Wayland (wlroots support)
+    input-remapper # alt remapper
     oguri # Animated wallpaper daemon for Wayland
 
     # Niri-specific tools
